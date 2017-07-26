@@ -6,4 +6,4 @@ $access_token = 'tGB5WH9AfUCs6PIE3QKcGkrnnvqgNDCwep/5ZsEABIesFgYnZH6SH0r4XTl7L+m
 $httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient('<channel access token>');
 $bot = new \LINE\LINEBot($httpClient, ['channelSecret' => '<channel secret>']);
 
-//$response = $bot->replyText('<reply token>', 'hello!');
+$response = $bot->replyText('<reply token>', 'hello!');
