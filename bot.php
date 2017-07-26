@@ -44,11 +44,14 @@ if (!is_null($events['events'])) {
 		}
 
 		if ($event['type'] == 'message' && $event['message']['type'] == 'image') {
+			$text = 'ควยไรวะ';
 			$replyToken = $event['replyToken'];
+			// Build message to reply back
 			$messages = [
 				'type' => 'text',
-				'text' => 'ส่งรูปมาทำไมละ ไม่เอารูปมองไม่ออก'
+				'text' => $text
 			];
+
 
 			$url = 'https://api.line.me/v2/bot/message/reply';
 			$data = [
