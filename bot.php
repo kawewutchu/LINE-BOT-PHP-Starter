@@ -23,6 +23,7 @@ if (!is_null($events['events'])) {
 
 			
 			$url = 'https://api.line.me/v2/bot/message/reply';
+			
 			$data = [
 				'replyToken' => $replyToken,
 				'messages' => [$messages],
@@ -43,7 +44,7 @@ if (!is_null($events['events'])) {
 		}
 
 		if ($event['type'] == 'message' && $event['message']['type'] == 'image') {
-			
+			$replyToken = $event['replyToken'];
 			$messages = [
 				'type' => 'text',
 				'text' => 'ส่งรูปมาทำไมละ ไม่เอารูปมองไม่ออก'
