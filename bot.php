@@ -10,7 +10,7 @@ if (!is_null($events['events'])) {
 	// Loop through each event
 	foreach ($events['events'] as $event) {
 		// Reply only when message sent is in 'text' format
-		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
+		if ($event['type'] == 'message' && $event['message']['type'] == 'text'  && $event['message']['text'] != 'คำถาม') {
 			// Get text sent
 			$text = $event['message']['text'];
 			// Get replyToken
@@ -43,7 +43,7 @@ if (!is_null($events['events'])) {
 			echo $result . "\r\n";
 		}
 
-		if ($event['type'] == 'message' && $event['message']['type'] == 'image' & $event['message']['text'] != 'คำถาม') {
+		if ($event['type'] == 'message' && $event['message']['type'] == 'image') {
 			$text = 'ควยไรวะ';
 			$replyToken = $event['replyToken'];
 			// Build message to reply back
