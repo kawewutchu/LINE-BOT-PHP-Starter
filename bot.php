@@ -43,7 +43,7 @@ if (!is_null($events['events'])) {
 			echo $result . "\r\n";
 		}
 
-		if ($event['type'] == 'message' && $event['message']['type'] == 'image') {
+		if ($event['type'] == 'message' && $event['message']['type'] == 'image' & $event['message']['text'] != 'คำถาม') {
 			$text = 'ควยไรวะ';
 			$replyToken = $event['replyToken'];
 			// Build message to reply back
